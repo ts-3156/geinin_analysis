@@ -20,6 +20,7 @@ GEM
     concurrent-ruby (1.1.5)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.5)
     equalizer (0.0.11)
     http (3.3.0)
       addressable (~> 2.3)
@@ -74,6 +75,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  dotenv
   mysql2
   pry
   twitter_friendly
