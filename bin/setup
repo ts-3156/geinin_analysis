@@ -1,0 +1,15 @@
+require "active_record"
+
+# sql = "CREATE DATABASE #{db_config["dev"]["database"]} /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */"
+# ActiveRecord::Base.connection.execute(sql)
+
+db_config = YAML.load_file("database.yml")
+ActiveRecord::Base.establish_connection(db_config["dev"])
+
+ActiveRecord::Migration.create_table :credentials do |t|
+  t.string :secret, null: false
+  t.string :token, null: false
+
+  t.index :secret, unique: true
+  t.index :token, unique: true
+end
