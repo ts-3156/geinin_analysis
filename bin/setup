@@ -13,3 +13,12 @@ ActiveRecord::Migration.create_table :credentials do |t|
   t.index :secret, unique: true
   t.index :token, unique: true
 end
+
+ActiveRecord::Migration.create_table :users do |t|
+  t.bigint :uid, null: false
+  t.string :screen_name, null: false
+  t.text :profile_json
+
+  t.index :uid, unique: true
+  t.index :screen_name, unique: true
+end
