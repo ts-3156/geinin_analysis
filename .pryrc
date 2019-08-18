@@ -4,6 +4,7 @@ Dotenv.load
 require "erb"
 require "active_record"
 require "./lib/credential.rb"
+require "./lib/geinin.rb"
 require "./lib/user.rb"
 require "./lib/following.rb"
 require "./lib/tweet.rb"
