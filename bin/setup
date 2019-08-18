@@ -22,3 +22,19 @@ ActiveRecord::Migration.create_table :users do |t|
   t.index :uid, unique: true
   t.index :screen_name, unique: true
 end
+
+ActiveRecord::Migration.create_table :followings do |t|
+  t.bigint :from_uid, null: false
+  t.bigint :to_uid, null: false
+
+  t.index [:from_uid, :to_uid], unique: true
+end
+
+ActiveRecord::Migration.create_table :tweets do |t|
+  t.bigint :uid, null: false
+  t.string :screen_name, null: false
+  t.text :content_json
+
+  t.index :uid
+  t.index :screen_name
+end
