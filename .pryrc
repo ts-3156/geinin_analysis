@@ -13,3 +13,5 @@ ActiveRecord::Base.establish_connection(db_config["dev"])
 require 'twitter_friendly'
 
 client = Credential.first.api_client
+
+geinin_names = File.read('geinin_names.txt').split("\n")
