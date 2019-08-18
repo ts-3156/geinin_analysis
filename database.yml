@@ -6,5 +6,5 @@ dev:
   database: geinin_analysis
   pool: 5
   username: root
-  password:
+  password: <%= ENV["DB_PASS"] %>
   host: localhost

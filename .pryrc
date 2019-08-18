@@ -1,13 +1,14 @@
 require "dotenv"
 Dotenv.load
 
+require "erb"
 require "active_record"
 require "./lib/credential.rb"
 require "./lib/user.rb"
 require "./lib/following.rb"
 require "./lib/tweet.rb"
 
-db_config = YAML.load_file("database.yml")
+db_config = YAML.load(ERB.new(File.read("database.yml")).result)
 ActiveRecord::Base.establish_connection(db_config["dev"])
 
 require 'twitter_friendly'
