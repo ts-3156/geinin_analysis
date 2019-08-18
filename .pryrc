@@ -7,6 +7,7 @@ require "./lib/credential.rb"
 require "./lib/geinin.rb"
 require "./lib/user.rb"
 require "./lib/following.rb"
+require "./lib/follower.rb"
 require "./lib/tweet.rb"
 
 db_config = YAML.load(ERB.new(File.read("database.yml")).result)

@@ -39,6 +39,13 @@ ActiveRecord::Migration.create_table :followings do |t|
   t.index [:from_uid, :to_uid], unique: true
 end
 
+ActiveRecord::Migration.create_table :followers do |t|
+  t.bigint :from_uid, null: false
+  t.bigint :to_uid, null: false
+
+  t.index [:from_uid, :to_uid], unique: true
+end
+
 ActiveRecord::Migration.create_table :tweets do |t|
   t.bigint :uid, null: false
   t.string :screen_name, null: false
