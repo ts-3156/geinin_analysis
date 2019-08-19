@@ -14,9 +14,13 @@ ActiveRecord::Migration.create_table :credentials do |t|
   t.index :token, unique: true
 end
 
-ActiveRecord::Migration.create_table :users do |t|
+ActiveRecord::Migration.create_table :geinins do |t|
+  t.integer :rank
   t.bigint :uid, null: false
   t.string :screen_name, null: false
+  t.integer :friends_count
+  t.integer :followers_count
+  t.text :description
   t.text :profile_json
 
   t.index :uid, unique: true
@@ -26,6 +30,9 @@ end
 ActiveRecord::Migration.create_table :users do |t|
   t.bigint :uid, null: false
   t.string :screen_name, null: false
+  t.integer :friends_count
+  t.integer :followers_count
+  t.text :description
   t.text :profile_json
 
   t.index :uid, unique: true
