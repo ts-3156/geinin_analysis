@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/ts-3156/twitter_friendly
+  revision: 5fcd476261f81ecef919b179ad7f7fe9fdb7d158
+  specs:
+    twitter_friendly (2.0.0.pre.alpha)
+      activesupport (>= 4.2, < 6.0)
+      oj (~> 3.7.6)
+      parallel (~> 1.12.1)
+      twitter (~> 6.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,11 +69,6 @@ GEM
       multipart-post (~> 2.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
-    twitter_friendly (1.2.3)
-      activesupport (>= 4.2, < 6.0)
-      oj (~> 3.7.6)
-      parallel (~> 1.12.1)
-      twitter (~> 6.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unf (0.1.4)
@@ -78,7 +83,7 @@ DEPENDENCIES
   dotenv
   mysql2
   pry
-  twitter_friendly
+  twitter_friendly!
 
 BUNDLED WITH
    2.0.1
